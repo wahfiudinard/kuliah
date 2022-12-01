@@ -51,8 +51,7 @@ class Heading extends StatelessWidget {
           fontSize: 12.0,
           color: Colors.green,
           fontWeight: FontWeight.bold,
-        )
-    );
+        ));
   }
 }
 
@@ -72,16 +71,33 @@ class _BiggerTextState extends State<BiggerText> {
         "Text Yang Ditampilkan",
         style: TextStyle(fontSize: _textSize),
       ),
+      Container(
+        decoration: const BoxDecoration(
+            color: Colors.red,
+            shape: BoxShape.rectangle,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black,
+                offset: Offset(3, 6),
+                blurRadius: 10,
+              )
+            ]),
+        margin: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
+        // color: Colors.blue,
+        child: const Text(
+          "Didalam Container",
+          style: TextStyle(fontSize: 25),
+          textAlign: TextAlign.center,
+        ),
+      ),
       ElevatedButton(
           onPressed: () {
             setState(() {
               _textSize = 32.0;
-            }
-            );
+            });
           },
-          child: const Text("Perbesar")
-        )
-      ]
-    );
+          child: const Text("Perbesar"))
+    ]);
   }
 }
