@@ -72,10 +72,11 @@ class _BiggerTextState extends State<BiggerText> {
         style: TextStyle(fontSize: _textSize),
       ),
       Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             color: Colors.red,
-            shape: BoxShape.rectangle,
-            boxShadow: [
+            border: Border.all(color: Colors.orange, width: 1),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: const [
               BoxShadow(
                 color: Colors.black,
                 offset: Offset(3, 6),
