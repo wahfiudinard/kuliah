@@ -51,7 +51,8 @@ class Heading extends StatelessWidget {
           fontSize: 12.0,
           color: Colors.green,
           fontWeight: FontWeight.bold,
-        ));
+        )
+    );
   }
 }
 
@@ -75,9 +76,12 @@ class _BiggerTextState extends State<BiggerText> {
           onPressed: () {
             setState(() {
               _textSize = 32.0;
-            });
+            }
+            );
           },
-          child: const Text("Perbesar"))
-    ]);
+          child: const Text("Perbesar")
+        )
+      ]
+    );
   }
 }
