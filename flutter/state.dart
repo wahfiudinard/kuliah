@@ -28,7 +28,13 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        body: const Center(child: BiggerText()),
+        body: const Center(
+          child: BiggerText(),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),
       ),
     );
   }
