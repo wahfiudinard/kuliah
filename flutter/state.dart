@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.red),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Belajar Mengenal Widget"),
+          title: const Text("Belajar Mengenal Widget"),
           actions: [
             IconButton(
               onPressed: () {},
