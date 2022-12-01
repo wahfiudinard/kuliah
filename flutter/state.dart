@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.red),
       home: Scaffold(
         appBar: AppBar(title: Text("Belajar Mengenal Widget")),
-        body: const Center(
-            child: Heading(text: "Bismillah Belajar Mengenal Widget")),
+        body: const Center(child: BiggerText()),
       ),
     );
   }
@@ -33,5 +32,32 @@ class Heading extends StatelessWidget {
           color: Colors.green,
           fontWeight: FontWeight.bold,
         ));
+  }
+}
+
+class BiggerText extends StatefulWidget {
+  const BiggerText({super.key});
+
+  @override
+  State<BiggerText> createState() => _BiggerTextState();
+}
+
+class _BiggerTextState extends State<BiggerText> {
+  double _textSize = 16.0;
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Text(
+        "Text Yang Ditampilkan",
+        style: TextStyle(fontSize: _textSize),
+      ),
+      ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _textSize = 32.0;
+            });
+          },
+          child: const Text("Perbesar"))
+    ]);
   }
 }
