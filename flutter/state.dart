@@ -13,7 +13,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.red),
       home: Scaffold(
-        appBar: AppBar(title: Text("Belajar Mengenal Widget")),
+        appBar: AppBar(
+          title: Text("Belajar Mengenal Widget"),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+              color: Colors.white,
+            )
+          ],
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+            color: Colors.white,
+          ),
+        ),
         body: const Center(child: BiggerText()),
       ),
     );
@@ -46,7 +60,7 @@ class _BiggerTextState extends State<BiggerText> {
   double _textSize = 16.0;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Text(
         "Text Yang Ditampilkan",
         style: TextStyle(fontSize: _textSize),
